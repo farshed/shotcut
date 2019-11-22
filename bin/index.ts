@@ -1,9 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import { exec, ask, terminate } from '../lib/cli';
-import { boldRed } from '../lib/colors';
-import * as q from '../lib/questions';
-import { checkType } from '../lib/vibecheck';
+import { exec, ask, terminate } from '../lib/CLI';
+import { boldRed } from '../lib/Colors';
+import * as q from '../lib/GetParams';
 const { version } = require('../package.json');
 
 const SOUND_THRESHOLD = 0.04;
@@ -14,12 +11,14 @@ let obj = {};
 
 (async function shotCutter() {
 	try {
-		let name = await q.getInputName();
-		if (!fs.existsSync(path.join(__dirname, name.toString())))
-			throw 'No file with this name exists!';
-		// let soundSpeed: number = await q.getSoundSpeed();
+		let inputName = await q.getInputName();
+		let soundSpeed = await q.getSoundSpeed();
+		let silenceSpeed = await q.getSilenceSpeed();
+		let silentThreshold = await q.getSilentThreshold();
+		let frameMargin = await q.getFrameMargin();
+		let frameRate = q.getFrameRate();
+		let outputName = q.getOutputName(inputName);
 	} catch (e) {
 		console.log(boldRed(e));
-		shotCutter();
 	}
 })();
