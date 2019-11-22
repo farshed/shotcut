@@ -1,12 +1,17 @@
 {
 	"name": "shotcut",
+	"bin": "./bin/index.js",
 	"version": "1.0.0",
 	"main": "index.js",
 	"author": "Faisal Arshed",
 	"license": "MIT",
 	"private": false,
+	"preferGlobal": true,
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/farshed/shotcut.git"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.11"
 	}
 }
