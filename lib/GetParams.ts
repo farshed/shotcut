@@ -1,7 +1,9 @@
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+import * as path from 'path';
 import { ask } from './CLI';
 import { boldRed, boldGrey } from './Colors';
+
+function vibeCheck(val: string, type: string = 'int', callback) {}
 
 export const getInputName = async () => {
 	let name = await ask('Enter the name of the video file: ');
