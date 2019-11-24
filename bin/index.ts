@@ -1,7 +1,9 @@
 import * as path from 'path';
 import * as fs from 'fs';
-const AudioContext = require('web-audio-api').AudioContext;
+const { AudioContext } = require('web-audio-api');
 const context = new AudioContext();
+const toWav = require('audiobuffer-to-wav');
+const createBuffer = require('audio-buffer-from');
 import { exec, ask, terminate } from '../lib/CLI';
 import { boldRed, bold } from '../lib/Colors';
 import * as q from '../lib/GetParams';
@@ -12,10 +14,10 @@ let sampleCount = 0;
 let duration = 0;
 let frameRate = 0;
 let soundSpeed = 0;
-let silenceSpeed;
+let silenceSpeed = 0;
 let silentThreshold;
-let frameMargin;
-let inputName;
+let frameMargin = 0;
+let inputName = '';
 let outputName = '';
 const frameQuality = 3;
 const sampleRate = 44100;
@@ -110,12 +112,12 @@ async function processAudio() {
 		let chunk = pcmData.slice(chunks[i][0]*samplesPerFrame, chunks[i][1]*samplesPerFrame);
 		let sFile = path.join(tempDir, 'audio_temp_s.wav');
 		let eFile = path.join(tempDir, 'audio_temp_w.wav');
-		context
+		let wavForm = toWav(createBuffer(chunk));
+    let chunkToWrite = new Buffer(new Uint8Array(wavForm));
+    fs.appendFile(sFile, chunkToWrite, console.log);
 	}
     
-    sFile = TEMP_FOLDER+"/tempStart.wav"
-    eFile = TEMP_FOLDER+"/tempEnd.wav"
-    wavfile.write(sFile,SAMPLE_RATE,audioChunk)
+    // wavfile.write(sFile,SAMPLE_RATE,audioChunk)
     with WavReader(sFile) as reader:
         with WavWriter(eFile, reader.channels, reader.samplerate) as writer:
             tsm = phasevocoder(reader.channels, speed=NEW_SPEED[int(chunk[2])])

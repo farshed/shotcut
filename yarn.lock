@@ -37,6 +37,53 @@ async@0.9.x:
   resolved "https://registry.yarnpkg.com/async/-/async-0.9.2.tgz#aea74d5e61c1f899613bf64bda66d4c78f2fd17d"
   integrity sha1-rqdNXmHB+JlhO/ZL2mbUx48v0X0=
 
+atob-lite@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/atob-lite/-/atob-lite-2.0.0.tgz#0fef5ad46f1bd7a8502c65727f0367d5ee43d696"
+  integrity sha1-D+9a1G8b16hQLGVyfwNn1e5D1pY=
+
+audio-buffer-from@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/audio-buffer-from/-/audio-buffer-from-1.1.1.tgz#6ba1dd0d463ce19e7ba19f91f5e1f725178d38d8"
+  integrity sha512-8Wcira24z+26GXDFe7ZFRF1bJm1iWrz8O+XL8iNZxZjxqAPXIoK1IrJiOqStv35ASPbRjG57ZK/T0WO92MDUSg==
+  dependencies:
+    audio-buffer "^4.0.4"
+    audio-context "^1.0.1"
+    audio-format "^2.0.0"
+    is-audio-buffer "^1.0.11"
+    is-plain-obj "^1.1.0"
+    pcm-convert "^1.6.0"
+    pick-by-alias "^1.2.0"
+    string-to-arraybuffer "^1.0.0"
+
+audio-buffer@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/audio-buffer/-/audio-buffer-4.0.4.tgz#cdb03855a951a1c2931ac1e7b00a9d9d3a4d4858"
+  integrity sha512-phH+MR3G+N/PO5ZKKxx7HlU6vJwAJFa0+FCaTjr/4lUZU/RCjUTqlk3nMJTRy5+b+6cbx8m//EtwZOVI5Ht9+w==
+  dependencies:
+    audio-context "^1.0.0"
+
+audio-context@^1.0.0, audio-context@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/audio-context/-/audio-context-1.0.3.tgz#aae5636691a8cdc15fc91059704cbc7c2fb7abf9"
+  integrity sha512-RH3/rM74f2ITlohhjgC7oYZVS97wtv/SEjXLCzEinnrIPIDxc39m2aFc6wmdkM0NYRKo1DMleYPMAIbnTRW0eA==
+
+audio-format@^2.0.0, audio-format@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/audio-format/-/audio-format-2.3.2.tgz#f23fc73b308c6dfba1904da6d4cd9c7621731abd"
+  integrity sha512-5IA2grZhaVhpGxX6lbJm8VVh/SKQULMXXrFxuiodi0zhzDPRB8BJfieo89AclEQv4bDxZRH4lv06qNnxqkFhKQ==
+  dependencies:
+    is-audio-buffer "^1.0.11"
+    is-buffer "^1.1.5"
+    is-plain-obj "^1.1.0"
+    pick-by-alias "^1.2.0"
+    sample-rate "^2.0.0"
+
+audiobuffer-to-wav@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/audiobuffer-to-wav/-/audiobuffer-to-wav-1.0.0.tgz#d5b432271455e7fee56b111cd0f8d620d7f9e105"
+  integrity sha1-1bQyJxRV5/7laxEc0PjWINf54QU=
+
 audiobuffer@0.2.x:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/audiobuffer/-/audiobuffer-0.2.0.tgz#7cf2df30701aac184333eaf9e8ee3b01830c861a"
@@ -123,6 +170,26 @@ inherits@~2.0.3:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
+is-audio-buffer@^1.0.11:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-audio-buffer/-/is-audio-buffer-1.1.0.tgz#f4c7f274d20180f993f9b1650768cb77bedd4470"
+  integrity sha512-fmPC/dizJmP4ITCsW5oTQGMJ9wZVE+A/zAe6FQo3XwgERxmXHmm3ON5XkWDAxmyxvsrDmWx3NArpSgamp/59AA==
+
+is-base64@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/is-base64/-/is-base64-0.1.0.tgz#a6f20610c6ef4863a51cba32bc0222544b932622"
+  integrity sha512-WRRyllsGXJM7ZN7gPTCCQ/6wNPTRDwiWdPK66l5sJzcU/oOzcIcRRf0Rux8bkpox/1yjt0F6VJRsQOIG2qz5sg==
+
+is-buffer@^1.1.5:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
+  integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
+
+is-plain-obj@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-1.1.0.tgz#71a50c8429dfca773c92a390a4a03b39fcd51d3e"
+  integrity sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
+
 isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
@@ -148,6 +215,11 @@ nan@^2.2.0:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
+object-assign@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
+  integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
+
 pcm-boilerplate@0.1.x:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/pcm-boilerplate/-/pcm-boilerplate-0.1.1.tgz#cb83b499fe2508c0f6c18338003fce239e150931"
@@ -156,6 +228,21 @@ pcm-boilerplate@0.1.x:
     async "0.2.x"
     chai "1.7.x"
     underscore "1.4.x"
+
+pcm-convert@^1.6.0:
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/pcm-convert/-/pcm-convert-1.6.5.tgz#81b5f2d0c2fb386edb8b9f69ce2374e093aeb7cc"
+  integrity sha512-5CEspU4j8aEQ80AhNbcLfpT0apc93E6endFxahWd4sV70I6PN7LPdz8GoYm/1qr400K9bUVsVA+KxNgbFROZPw==
+  dependencies:
+    audio-format "^2.3.2"
+    is-audio-buffer "^1.0.11"
+    is-buffer "^1.1.5"
+    object-assign "^4.1.1"
+
+pick-by-alias@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/pick-by-alias/-/pick-by-alias-1.2.0.tgz#5f7cb2b1f21a6e1e884a0c87855aa4a37361107b"
+  integrity sha1-X3yysfIabh6ISgyHhVqko3NhEHs=
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
@@ -180,6 +267,11 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
   integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
 
+sample-rate@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/sample-rate/-/sample-rate-2.0.1.tgz#3f508969262b2c729a95d4d42b795a5b33610bd0"
+  integrity sha512-AIK0vVBiAEObmpJOxQu/WCyklnWGqzTSDII4O7nBo+SJHmfgBUiYhgV/Y3Ohz76gfSlU6R5CIAKggj+nAOLSvg==
+
 speaker@^0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/speaker/-/speaker-0.3.1.tgz#19965f87b54be291554826c2c9338e0afd5b7594"
@@ -189,6 +281,14 @@ speaker@^0.3.0:
     debug "^2.2.0"
     nan "^2.2.0"
     readable-stream "^2.0.5"
+
+string-to-arraybuffer@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/string-to-arraybuffer/-/string-to-arraybuffer-1.0.2.tgz#161147fbadea02e28b0935002cec4c40f1ca7f0a"
+  integrity sha512-DaGZidzi93dwjQen5I2osxR9ERS/R7B1PFyufNMnzhj+fmlDQAc1DSDIJVJhgI8Oq221efIMbABUBdPHDRt43Q==
+  dependencies:
+    atob-lite "^2.0.0"
+    is-base64 "^0.1.0"
 
 string_decoder@~1.1.1:
   version "1.1.1"
