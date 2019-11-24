@@ -2,3 +2,6 @@ node_modules/
 npm-debug.log
 yarn-error.log
 bin/jumpcutter.py
+bin/some.mp4
+lib/some.mp4
+bin/TEMP
